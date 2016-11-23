@@ -2,11 +2,12 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET     /test   controllers.RaffleController.test
+GET     /test                           controllers.RaffleController.test
 
+POST     /raffle                        controllers.RaffleController.createRaffle(id:String)
+POST     /raffle/{id}/participant       controllers.RaffleController.addParticipant(id:String, username:String)
+GET      /raffle{id}/participants       controllers.RaffleController.listParticipants(id:String)
 
-
-POST /raffle                        controllers.application.createRaffle(name:String)
 
 
 # Map static resources from the /public folder to the /assets URL path
